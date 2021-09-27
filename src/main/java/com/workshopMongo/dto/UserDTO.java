@@ -2,9 +2,11 @@ package com.workshopMongo.dto;
 
 import java.io.Serializable;
 
+import java.util.Objects;
+
 import com.workshopMongo.domain.User;
 
-public class UserDTO implements Serializable{
+public class UserDTO implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 	private String id;
@@ -19,6 +21,7 @@ public class UserDTO implements Serializable{
 		id = obj.getId();
 		name = obj.getName();
 		email = obj.getEmail();
+
 	}
 
 	public String getId() {
@@ -44,6 +47,22 @@ public class UserDTO implements Serializable{
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	
-	
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(id);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		UserDTO other = (UserDTO) obj;
+		return Objects.equals(id, other.id);
+	}
+
 }
