@@ -1,7 +1,6 @@
 package com.workshopMongo.dto;
 
 import java.io.Serializable;
-
 import java.util.Objects;
 
 import com.workshopMongo.domain.User;
@@ -12,6 +11,7 @@ public class UserDTO implements Serializable {
 	private String id;
 	private String name;
 	private String email;
+
 
 	public UserDTO() {
 
@@ -47,6 +47,7 @@ public class UserDTO implements Serializable {
 	public void setEmail(String email) {
 		this.email = email;
 	}
+
 
 	@Override
 	public int hashCode() {
