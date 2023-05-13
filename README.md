@@ -17,7 +17,7 @@ Antes de executar o projeto, é necessário ter as seguintes ferramentas instala
 - [Maven](https://maven.apache.org/)
 - [Spring Tool Suite (STS)](https://spring.io/tools) ou outra IDE compatível com projetos Maven/Spring Boot.
 
-## Uso
+## Endpoints
 
 A aplicação é uma API REST que disponibiliza os seguintes endpoints:
 
